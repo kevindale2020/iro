@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.abc123.iro">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/iro_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/iro"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AdoptionActivity"
+            android:label="@string/title_activity_adoption"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AdoptionDetailsActivity"
+            android:label="@string/title_activity_adoption"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AdoptionFormActivity"
+            android:label="@string/title_activity_adoption"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:label="@string/change_password"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyAdoptionActivity"
+            android:label="@string/my_adoption"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Report1Activity"
+            android:label="@string/report1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyAdoptionFormActivity"
+            android:label="@string/my_adoption"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".VolunteerFormActivity"
+            android:label="@string/volunteer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".VolunteerActivity"
+            android:label="@string/volunteer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MapsActivity2"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CommitteeActivity"
+            android:label="@string/volunteer_tab_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ItemActivity"
+            android:label="@string/items"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ItemDetailsActivity"
+            android:label="@string/items"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GuidelinesActivity"
+            android:label="@string/guidelines"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GuidelineDetailsActivity"
+            android:label="@string/guidelines"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EventsActivity"
+            android:label="@string/title_events"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyReportActivity"
+            android:label="@string/my_reports"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyReportFormActivity"
+            android:label="@string/my_reports"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NotificationActivity"
+            android:label="@string/notifications"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DonationActivity"
+            android:label="@string/donation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MyDonationFormActivity"
+            android:label="@string/donation"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

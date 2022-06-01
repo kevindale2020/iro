@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gray_background2"
+    android:backgroundTint="@color/quantum_grey200"
+    android:orientation="vertical"
+    tools:context=".MyAdoptionFormActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="0dp"
+        android:gravity="center_vertical"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/iro_logo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/adoption_form_header"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/adoption_form_details" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!-- name of applioant and date -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/name_applicant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/name_applicant"
+                            android:inputType="text"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/date_today"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/date_today"
+                            android:inputType="text"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+                <!-- end -->
+                <!-- children age -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/children_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/children_age"
+                            android:inputType="text"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+                <!-- end -->
+                <!-- address and contact -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/address"
+                            android:inputType="text"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+                <!-- end -->
+                <!-- contact and occupation -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/contact"
+                            android:inputType="text"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/occupation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/occupation"
+                            android:inputType="text"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <!-- end -->
+                <!-- name of pets, age and gender -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/pet_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/pet_name"
+                            android:inputType="text"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/pet_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/pet_age"
+                            android:inputType="text"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/pet_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/pet_gender"
+                            android:inputType="text"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+                <!-- end -->
+                <!-- reason -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/reason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/reason"
+                            android:inputType="text"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+                <!-- Will the pet be an indoor or outdoor pet? -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp">
+
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_enableErrorLabel="true"
+                        app:ms_enableFloatingLabel="false"
+                        app:ms_errorColor="#FFDD2C00" />
+
+                </LinearLayout>
+                <!-- end -->
+                <!-- pet house -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/pet_house"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/pet_house"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <!-- end -->
+
+                <!-- pet house -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/pet_past"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/pet_past"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <!-- end -->
+
+                <!-- pet describe -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/pet_describe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/pet_describe"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <!-- end -->
+                <!-- have backyard -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:text="@string/pet_backyard" />
+
+                    <RadioGroup
+                        android:id="@+id/radio_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkButton"
+                            android:text="@string/yes"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/radio_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkButton"
+                            android:text="@string/no"></RadioButton>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <!-- end -->
+
+                <!-- have fenced -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:text="@string/pet_fenced" />
+
+                    <RadioGroup
+                        android:id="@+id/radio_group2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_yes2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkButton2"
+                            android:text="@string/yes"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/radio_no2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkButton2"
+                            android:text="@string/no"></RadioButton>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <!-- end -->
+
+                <!-- have veterinarian -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:text="@string/pet_vet" />
+
+                    <RadioGroup
+                        android:id="@+id/radio_group3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_yes3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkButton3"
+                            android:text="@string/yes"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/radio_no3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkButton3"
+                            android:text="@string/no"></RadioButton>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <!-- end -->
+
+                <!-- veterinarian name -->
+                <LinearLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/pet_vet_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/pet_vet_name"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+                <!-- end -->
+
+                <!-- veterinarian address -->
+                <LinearLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/pet_vet_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/address"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+                <!-- end -->
+
+                <!-- circumstances -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/pet_circumstances"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/pet_circumstances"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+                <!-- end -->
+                <!-- home visist -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pet_home_visit" />
+
+                </LinearLayout>
+                <!-- end -->
+                <!-- home visist radio button -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp">
+
+                    <RadioGroup
+                        android:id="@+id/radio_group4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_yes4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkButton4"
+                            android:text="@string/yes"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/radio_no4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkButton4"
+                            android:text="@string/no"></RadioButton>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <!-- end -->
+
+                <!-- disagree home visist -->
+                <LinearLayout
+                    android:id="@+id/layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/pet_no_visit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/no_visit"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+                <!-- end -->
+
+                <!-- agree home visist -->
+                <LinearLayout
+                    android:id="@+id/layout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/pet_yes_visit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/yes_visit"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+                <!-- end -->
+
+                <!-- comments -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/pet_comments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/pet_comments"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+                <!-- end -->
+            </LinearLayout>
+            <!-- checkbox
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:text="@string/terms_and_conditions"
+                    android:textColor="@color/quantum_grey" />
+            </LinearLayout>-->
+            <!--attachment-->
+            <LinearLayout
+                android:id="@+id/layout_attachment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnAttach"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_press"
+                    android:drawableLeft="@drawable/ic_attach_file_black_24dp"
+                    android:letterSpacing="0.2"
+                    android:padding="5dp"
+                    android:text="@string/attachment"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <!--end-->
+            <!-- file name -->
+            <LinearLayout
+                android:id="@+id/layout_file"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_file_required"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_file_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/attached_file"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/file"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/file_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/file"
+                        android:background="@drawable/ic_close_black2_24dp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/file2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/file_close2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/file2"
+                        android:background="@drawable/ic_close_black2_24dp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/file3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/file_close3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/file3"
+                        android:background="@drawable/ic_close_black2_24dp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/file4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/file_close4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/file4"
+                        android:background="@drawable/ic_close_black2_24dp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/file5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/file_close5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/file5"
+                        android:background="@drawable/ic_close_black2_24dp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <!-- end -->
+            <!-- end -->
+            <!-- button -->
+            <LinearLayout
+                android:id="@+id/layout_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/button_rounded"
+                    android:gravity="center"
+                    android:letterSpacing="0.2"
+                    android:padding="16dp"
+                    android:text="@string/save"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <!-- end -->
+            <!-- Other Details -->
+            <LinearLayout
+                android:id="@+id/layout_other_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/attached_file"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>-->
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/date_transact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:textSize="16sp" />
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+            <!-- end -->
+            <!-- reason -->
+            <LinearLayout
+                android:id="@+id/layout_reason2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/reason2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:textSize="16sp" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+            <!-- end -->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

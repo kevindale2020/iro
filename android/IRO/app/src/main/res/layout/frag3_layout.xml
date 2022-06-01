@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_volunteer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="@string/volunter_history"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/quantum_white_100" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/image_circle"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/text"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    app:cardCornerRadius="64dp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="64dp">
+
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:id="@+id/image_view"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:scaleType="centerCrop" />
+
+
+                    </android.support.v7.widget.CardView>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/image_active_cover"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignRight="@id/image_circle"
+                    android:layout_alignBottom="@+id/image_circle"
+                    android:visibility="gone"
+                    app:cardCornerRadius="64dp">
+
+
+                    <ImageView
+                        android:id="@+id/image_active"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:clickable="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_online" />
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/image_inactive_cover"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignRight="@id/image_circle"
+                    android:layout_alignBottom="@+id/image_circle"
+                    android:visibility="gone"
+                    app:cardCornerRadius="64dp">
+
+
+                    <ImageView
+                        android:id="@+id/image_inactive"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:clickable="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/is_offline" />
+
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/active"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_circle"
+                    android:layout_marginLeft="8dp"
+                    android:layout_alignLeft="@id/image_circle"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    android:textColor="@color/colorLight" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/image_circle"
+                    android:layout_toRightOf="@id/image_circle"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/name"
+                    android:layout_marginRight="5dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/email"
+                    android:layout_toRightOf="@id/image_circle"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name"
+                    android:layout_toRightOf="@id/image_circle"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/status"
+                    android:layout_below="@id/email"
+                    android:layout_marginRight="5dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="64dp">
+
+                    <ImageView
+                        android:id="@+id/icon_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_keyboard_arrow_right_black_24dp"
+                        android:clickable="true"
+                        android:scaleType="centerCrop" />
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cancel"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/status"
+                    android:layout_below="@id/email"
+                    android:layout_marginRight="50dp"
+                    app:cardCornerRadius="64dp"
+                    app:cardBackgroundColor="@color/colorRed">
+
+                    <ImageView
+                        android:id="@+id/icon_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_close_black_24dp"
+                        android:clickable="true"
+                        android:scaleType="centerCrop" />
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/open"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/status"
+                    android:layout_below="@id/email"
+                    android:layout_marginRight="50dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="64dp">
+
+                    <ImageView
+                        android:id="@+id/icon_open"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_refresh_black_24dp"
+                        android:clickable="true"
+                        android:scaleType="centerCrop" />
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/icon_leave_cover"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/status"
+                    android:layout_below="@id/email"
+                    android:layout_marginRight="50dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="64dp">
+
+                    <ImageView
+                        android:id="@+id/icon_leave"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_exit_to_app_black2_24dp"
+                        android:clickable="true"
+                        android:scaleType="centerCrop" />
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/icon_activate_cover"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/status"
+                    android:layout_below="@id/email"
+                    android:layout_marginRight="50dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="64dp">
+
+                    <ImageView
+                        android:id="@+id/icon_activate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_open_in_new_black_24dp"
+                        android:clickable="true"
+                        android:scaleType="centerCrop" />
+
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_no_post"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ic_sentiment_dissatisfied_black_24dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/no_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_no_post"
+        android:layout_centerInParent="true"
+        android:text="@string/no_post"
+        android:textColor="@color/colorNoPost"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+</RelativeLayout>
